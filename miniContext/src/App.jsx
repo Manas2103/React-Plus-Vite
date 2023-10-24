@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import UserContextProvider from './context/UserContextProvider'
+import Login from './components/Login'
+import Profile from './components/Profile'
+
+//this will give us the knowledge of how to update the data in contexts created
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <>
-      
-    </>
+    <UserContextProvider>
+      <Login/>
+      <Profile/>
+    </UserContextProvider>
   )
 }
 
